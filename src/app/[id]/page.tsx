@@ -47,7 +47,7 @@ export default function DetailPokemon({ params }: { params: { id: string } }) {
                 !dataPokemon && (
                     <div className="px-10 py-5">
                         <Link className="btn btn-outline btn-sm" href='/'>
-                            Back
+                            Back to home
                         </Link >
                         <div className="flex items-center justify-center h-[70vh]">
                             <p className="font-semibold">Data pokemon tidak ditemukan</p>
@@ -59,7 +59,7 @@ export default function DetailPokemon({ params }: { params: { id: string } }) {
                 dataPokemon && (
                     <div className="px-10 py-5">
                         <Link className="btn btn-outline btn-sm" href='/'>
-                            Back
+                            Back to home
                         </Link >
                         <div className='flex items-center justify-center h-[70vh]'>
                             <div className="shadow-xl card lg:card-side bg-base-100 min-w-[500px]">

@@ -14,6 +14,7 @@ export default function Home() {
   const [nextUrl, setNextUrl] = useState<string>('');
   const [prevUrl, setPrevUrl] = useState<string>('');
   const [url, setUrl] = useState('https://pokeapi.co/api/v2/pokemon');
+  const [search, setSearch] = useState<string>('');
 
   useEffect(() => {
     fetchData();
@@ -45,6 +46,10 @@ export default function Home() {
     setUrl(prevUrl);
   }
 
+  const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearch(e.target.value);
+  };
+
 
   return (
     <>
@@ -58,11 +63,12 @@ export default function Home() {
         <div className="join">
           <div>
             <div>
-              <input className="input input-bordered join-item" placeholder="Search..." />
+              <input className="input input-bordered join-item" placeholder="Search..." value={search}
+                onChange={handleSearch} />
             </div>
           </div>
           <div className="indicator">
-            <Link href={`/dsd`} className="btn join-item">Search</Link>
+            <Link href={`/${search}`} className="btn join-item">Search</Link>
           </div>
         </div>
         {/* search */}
