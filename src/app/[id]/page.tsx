@@ -3,6 +3,7 @@ import { MdCatchingPokemon } from "react-icons/md";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
+import React from "react";
 
 interface Pokemon {
     sprites: {

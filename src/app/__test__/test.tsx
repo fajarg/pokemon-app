@@ -14,7 +14,7 @@ test("navbar component should render", () => {
 
 test("data pokemon should show after data fetching", async () => {
   render(<Home />);
-  const tableHead = await screen.findByText(/bulbasaur/i);
+  const tableHead = await screen.findByText(/Pokemon name/i);
   expect(tableHead).toBeInTheDocument();
 });
 
